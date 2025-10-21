@@ -1,0 +1,74 @@
+# Desafio de Automação Digital: Gestão de Peças, Qualidade e Armazenamento
+
+## 1. Vídeo Pitch – Apresentação da Solução (2,0 pontos)
+
+O vídeo apresenta a solução em Python desenvolvida para o Desafio de Automação Digital: Gestão de Peças, Qualidade e Armazenamento, voltado à modernização do processo de inspeção de peças industriais.
+
+### Problema da Indústria Resolvido:
+
+O sistema visa eliminar falhas e atrasos causados pela inspeção manual, permitindo que o controle de qualidade das peças seja automatizado, rápido e confiável. Essa automação reduz custos operacionais e aumenta a precisão na aprovação das peças.
+
+### Estrutura Lógica do Sistema:
+
+* O programa foi desenvolvido com base em critérios de qualidade predefinidos (peso, cor e comprimento), utilizando estruturas condicionais e funções para determinar se cada peça é aprovada ou reprovada.
+* As peças aprovadas são automaticamente alocadas em caixas de capacidade fixa (10 peças), sendo que o sistema fecha a caixa e inicia uma nova ao atingir o limite.
+* Além disso, o sistema gera relatórios consolidados com totais de peças aprovadas, reprovadas, motivos de reprovação e quantidade de caixas utilizadas.
+
+### Técnicas e Boas Práticas Aplicadas:
+
+Foram aplicados princípios de modularização com funções bem definidas, uso de listas e dicionários para armazenamento estruturado dos dados, além da aplicação de loops e condicionais otimizados para garantir clareza e eficiência no código. Também foram implementadas mensagens interativas para facilitar a usabilidade.
+
+### Demonstração do Programa:
+
+A execução prática do sistema, mostrando seu funcionamento no terminal, está demonstrada nos links abaixo.
+
+📽️ **Links dos Vídeos:**
+* Apresentação (Pitch): [https://youtu.be/JIov510DLs8](https://youtu.be/JIov510DLs8)
+* Demonstração prática (Execução no terminal): [https://youtu.be/tkXdaJHcu7Y?si=bcL0V6VA-RIhPvqV](https://youtu.be/tkXdaJHcu7Y?si=bcL0V6VA-RIhPvqV)
+
+---
+
+## 2. Parte Teórica – Análise e Discussão (1,5 pontos)
+
+### A. Contextualização do Desafio: A Importância da Automação na Indústria
+
+O setor industrial moderno, inserido no contexto da Indústria 4.0, exige que a produção seja não apenas rápida, mas, acima de tudo, consistente. O desafio proposto espelha uma realidade comum: a inspeção de qualidade manual.
+
+A dependência de processos manuais na conferência de peças gera vulnerabilidades críticas:
+
+* **Inconsistência Humana:** Fatores como fadiga ou subjetividade do operador podem levar à aprovação de peças defeituosas (falhas de conferência) ou à reprovação indevida de peças boas.
+* **Gargalos de Produção:** O tempo gasto na inspeção manual atrasa o fluxo da linha de montagem, elevando o *lead time*.
+* **Aumento de Custos:** Falhas de qualidade que não são detectadas precocemente resultam em custos de *retrabalho* ou *desperdício* tardio.
+
+A automação digital, como a prototipada neste projeto, é importante porque resolve esses pontos, oferecendo **velocidade, precisão determinística e rastreabilidade**, transformando o controle de qualidade de um gargalo em um processo eficiente e preditivo.
+
+### B. Estrutura do Raciocínio Lógico
+
+A solução foi desenvolvida utilizando o paradigma de **Programação Orientada a Objetos (POO)** e um loop de controle interativo. O raciocínio lógico foi estruturado da seguinte forma:
+
+* **Modelagem com Classes (POO):**
+    * **Classe `Peca`:** Encapsula os atributos da peça (peso, cor, comprimento) e o resultado da inspeção (*status* e *motivo*).
+    * **Classe `GestaoProducao`:** Gerencia as listas de peças (aprovadas/reprovadas) e o estado logístico (caixas fechadas e atual).
+* **Decisões e Condições:** A função `_avaliar_qualidade` utiliza condições aninhadas (`if`/`else`) para verificar peso, cor e comprimento.
+* **Repetição e Fluxo de Controle:** O menu principal usa um loop `while True` para manter o sistema ativo até a opção de saída.
+
+### C. Benefícios e Desafios Enfrentados
+
+#### Benefícios:
+
+* **Traçabilidade de Falhas:** Registro detalhado do motivo da reprovação.
+* **Gestão Logística Otimizada:** Fechamento automático de caixas com 10 peças.
+* **Relatórios Consolidados:** Fornece métricas e causas de falha.
+
+#### Desafios:
+
+* **Gerenciamento de Estado Global:** Garantir consistência nas variáveis e caixas.
+* **Validação de Entrada:** Uso de `try-except` para prevenir falhas por erro de digitação.
+
+### D. Reflexão Final: Expansão para um Cenário Real
+
+Este protótipo em Python serve como base lógica para aplicações industriais reais. Sua expansão incluiria:
+
+* **Integração de Dados:** Sensores e CLPs (OPC UA / Modbus) coletando peso e comprimento automaticamente.
+* **Análise de Cor e Defeitos:** Visão computacional com OpenCV e IA (CNNs).
+* **Ação Logística Física:** Integração com CLPs e robôs para manuseio automático das caixas.
